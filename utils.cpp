@@ -54,3 +54,11 @@ struct edge
         return is;
     }
 };
+
+vector<vector<edge>> reformat_graph(vector<edge> &g, int m, int n)
+{
+    vector<vector<edge>> out(n);
+    for (auto e : g)
+        out[e.u].push_back(e);
+    return out;
+}
